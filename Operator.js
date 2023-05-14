@@ -278,15 +278,24 @@
 
 // ------------------------------------
 
-let number=+prompt("enter a number")
-let x='*'
-let space=' '
+// let number=+prompt("enter a number")
+// let x='*'
+// let space=' '
 
-for(var i=0; i<number; i++){
-       var sign1=x.repeat(number)
-       console.log(sign1+" ")
+// for(var i=0; i<number; i++){
+//        var sign1=x.repeat(number)
+//        console.log(sign1+" ")
+//        console.log("\n")
+// }
+
+let number =+prompt("enter a number")
+
+let zero='0'
+
+for(let i=1; i<=number; i++){
+       var zero1=zero.repeat(i)
+       console.log(zero1)
        console.log("\n")
 }
-
 
 
