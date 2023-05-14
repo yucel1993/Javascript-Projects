@@ -288,14 +288,127 @@
 //        console.log("\n")
 // }
 
-let number =+prompt("enter a number")
+// let number =+prompt("enter a number")
 
-let zero='0'
+// let zero='0'
 
-for(let i=1; i<=number; i++){
-       var zero1=zero.repeat(i)
-       console.log(zero1)
-       console.log("\n")
+// for(let i=1; i<=number; i++){
+//        var zero1=zero.repeat(i)
+//        console.log(zero1)
+//        console.log("\n")
+// }
+
+// var pow=
+
+
+// var mathe=funtion(a,b){
+       
+//        for(let i=0;i<b; i++){
+//         pow * = a
+//        }
+// return pow
+// }
+
+// mathe(2,3)
+
+
+// let pow = 1;
+
+// function math(a, b) {
+//   for(let i = 0; i < b; i++) {
+//     pow *= a;
+//   }
+//   return pow;
+// }
+
+// console.log(math(2, 3)); // Output: 8
+// console.log(typeof math(2, 3))
+
+// let math = (a, b) => {
+//        let pow = 1;
+//        for(let i = 0; i < b; i++) {
+//          pow *= a;
+//        }
+//        return pow;
+//      };
+     
+//      console.log(math(3, 3)); // Output: 8
+     
+
+// let math1=(a,b)=>{
+//        let pow=1
+//        for(i=0; i<b; i++){
+//               pow *=a
+//        }
+//        return pow
+// }
+
+// console.log(math1(3,3))
+
+// let experince11=+prompt("How many years")
+
+// const developer=experince11<5 ? () => alert("You are not eligible"): ()=> alert("You are eligible")
+
+// developer()
+
+
+// let toplam=(a,b)=>{
+//        let toplam1=a+b
+//        return toplam
+// }
+// let message
+// if (true) {
+//        let message = 'Merhaba';
+//        console.log(message);
+//      }
+//      console.log(message);
+
+// let firstName="Lorem"
+
+// function greetings(firstName="",lastName='mac'){
+//        console.log(`Merhaba ${firstName}${lastName}`)
+// }
+
+// greetings("Burhan")
+
+
+
+function greetings(A,B){
+       let info=` Hello ${A} ${B}`
+       return info
 }
 
+function domIdWrite(id,text){
+       let domInfo=document.querySelector(`#${id}`)
+       domInfo.innerHTML=text
+}
 
+domIdWrite("title",greetings("Burhan","Yucel"))
+
+
+
+// -------------------------------------
+
+// function number(n){
+//        var overall=1       
+//            for(let i=1 ;i<n ; i++){
+            
+//            overall *=i
+//        }
+//        return overall
+       
+//    }
+   
+//    number(5)
+
+
+   function number(n) {
+       var overall = 1;       
+       for (let i = 1; i < n+1; i++) {           
+         overall *= i;
+       }
+       console.log(overall); // Print the result to the console
+     }
+     
+     number(5); // Output: 24
+     
