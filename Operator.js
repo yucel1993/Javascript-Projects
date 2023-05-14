@@ -410,5 +410,21 @@ domIdWrite("title",greetings("Burhan","Yucel"))
        console.log(overall); // Print the result to the console
      }
      
-     number(5); // Output: 24
+number(5); // Output: 24
+
+
+let operators=document.querySelector("#operators")
+
+operators.addEventListener("mouseover",domClick)
+
+function domClick(){
+       console.log(this.innerHTML="Bilgi degisti")
+       console.log(this.style.color=="white" ? this.style.color="black" : this.style.color="white")
+       
+}
      
+
+
+
+
+
