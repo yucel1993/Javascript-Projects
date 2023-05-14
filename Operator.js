@@ -420,11 +420,24 @@ operators.addEventListener("mouseover",domClick)
 function domClick(){
        console.log(this.innerHTML="Bilgi degisti")
        console.log(this.style.color=="white" ? this.style.color="black" : this.style.color="white")
+       document.getElementById("title").innerHTML=="HAy it's working" ? document.getElementById("title").innerHTML="Woooooooooo" :document.getElementById("title").innerHTML="HAy it's working"
+
        
 }
      
+let counter=0
+let numb=document.getElementById("number")
+let increase=document.getElementById("increase")
+let decrease=document.getElementById("decrease")
+numb.innerHTML=counter
 
+increase.addEventListener("click",clickEvent)
+decrease.addEventListener("click",clickEvent)
 
-
+function clickEvent(){
+       console.log(this.id)
+       this.id=="increase" ? counter +=1 : counter -=1
+       numb.innerHTML=counter
+}
 
 
