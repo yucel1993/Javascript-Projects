@@ -370,7 +370,215 @@
 // }
 
 // greetings("Burhan")
+// ------------------------------------------------------------
+// Second Part  of simple questions
 
+// const fakto=(n)=>{
+//     if (n<=1){
+//         return 1
+//     }else{
+//         return n*fakto(n-1)
+//     }
+// }
+
+// let numb=+prompt("enter number")
+// console.log(fakto(4))
+// -------------------------------------------
+//  onlly var definition can call up outside of block
+// but let and const can not be called up
+// So if you want to define something then use var inside of block
+//  then you can show in console
+
+
+
+// var number3
+// console.log(number3)
+// number3 = 101 //? Hoisted degiskendir
+// console.log(number3)
+
+// // var result
+// if (number3 === 101) {
+//   const result = "Hi"
+//   console.log(result)
+// } else {
+//   var result = "Hello"
+//   console.log(result)
+// }
+// console.log(result)
+// ---------------------------------------------
+
+
+
+//   function sayi(){
+//     let x=12
+//      y=23
+// console.log("here is local",x)
+//   }
+//   sayi()
+//   console.log(x)
+//   console.log(y)
+
+// ------------------------------
+// reverse string funktion
+
+// let reverse= function(s){
+//   let word=''
+//   for(let i=s.length-1; i>-1 ;i--){
+//     word +=s[i]
+//   }
+//   return word
+
+// }
+
+// console.log(reverse("Burhan"))
+
+// let compare=function(word){
+//   if(word==reverse(word)){
+//     return 'Its iluminate'
+//   }else{
+//     return 'Not illuminate'
+//   }
+// }
+
+// console.log(compare("HassaH"))
+// --------------------------------------
+// VOVEL FINDER APPLICATION
+
+
+
+// let my_string=function(word){
+// let letter=''
+// for(let i=0 ; i<word.length ; i++){
+// if(word[i]=="a"){
+//   letter +='a'
+// }else if(word[i]=="e"){
+//   letter +='e'
+// }else if(word[i]=="o"){
+//   letter +='o'
+// }else if(word[i]=="ö"){
+//   letter +='ö'
+// }else if(word[i]=="u"){
+//   letter +='u'
+// }else if(word[i]=="ü"){
+//   letter +='ü'
+// }else if(word[i]=="i"){
+//   letter +='i'
+// }
+
+// }
+// return letter
+// }
+// console.log(my_string("kitaplerimiz"))
+
+
+// -------------------------------------------
+// Numberswhoese reminders are 0 function
+
+// let division=function(number){
+//   let my_list=[]
+//   let sum=0
+//   for(let i=1;i<=number;i++){
+//     if(number%i==0){
+//       my_list.push(i)
+//       sum +=i
+
+//     }
+//   }
+//   return sum
+  
+  
+// }
+
+// console.log(division(12))
+
+// -------------------------------------
+
+// let prime=function(number){
+//   let result=''
+//   if(number===0){
+//     result='0 or is not prime'
+//   }else if(number===1){
+//     result='1 is not prime'
+//   }else if(number===2){
+//     result="2 is prime"
+//   }else{
+//     for(let i=2;i<number;i++){
+//       if(number%i==0){
+//         result="This number is not prime"
+//         break
+//       }else{
+//         result="this number is prime"
+//       }
+//     }
+//   }
+//   return result
+// }
+// console.log(prime(1))
+
+
+// -----------------------------------
+// let numbers=[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// let bigger=function(numb){
+//   let max=null
+//   for(let i=0;i<numbers.length;i++){
+//     if(numbers[i]>max){
+//       max=numbers[i]
+//     }
+//   }
+//   return max
+// }
+
+// console.log(bigger(numbers))
+// -------------------------------------------
+
+// let numbers=[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// let add=function(number){
+//   let overall=0
+//   for(let i=0;i<number.length;i++){
+
+//     overall +=number[i]
+//   }
+//   return overall
+// }
+
+// console.log(add(numbers))
+
+// --------------------------------------------
+
+// let sentence='Hello word today is nice'
+
+// let length=(sentence.split('')).length
+// console.log(`this is sentence----> ${sentence.split(' ')} and length of his sentence ---->${(sentence.split(' ')).length}`)
+
+
+// ------------------------------------------------
+
+// let multi=function(number){
+//   let overall=[]
+//   for(i=1;i<=number;i++){
+//     if(number%i===0){
+//       overall.push(i)
+//     }
+//   }
+//   return overall
+// }
+
+// console.log(multi(12))
+
+
+
+
+
+
+
+
+
+
+
+
+// --------------------------------------------------------------
 
 
 function greetings(A,B){
