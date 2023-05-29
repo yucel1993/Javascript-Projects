@@ -9,3 +9,5 @@
 ### -Number Amstrong finder
 ### -Paper-Rock-Scissors Game
 ### -Guess the number Game
+### -Most repeated number finder
+### Hackerrank question Solutions
