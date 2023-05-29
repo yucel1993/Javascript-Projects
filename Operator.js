@@ -649,3 +649,543 @@ function clickEvent(){
 }
 
 
+// Nesneler
+
+
+const carData = [
+  {
+    id: 1,
+    make: 'Toyota',
+    model: 'Camry',
+    year: 2020,
+    color: 'Silver',
+    mileage: 25000,
+    engine: {
+      type: "V6",
+      horsepower: 300,
+      cylinders: 6
+    }
+  },
+  {
+    id: 2,
+    make: 'Honda',
+    model: 'Accord',
+    year: 2019,
+    color: 'White',
+    mileage: 20000,
+    engine: {
+      type: "V4",
+      horsepower: 140,
+      cylinders: 4
+    }
+  },
+  {
+    id: 3,
+    make: 'Ford',
+    model: 'Mustang',
+    year: 2018,
+    color: 'Red',
+    mileage: 15000,
+    engine: {
+      type: "V8",
+      horsepower: 400,
+      cylinders: 8
+    }
+  },
+  {
+    id: 4,
+    make: 'Chevrolet',
+    model: 'Camaro',
+    year: 2017,
+    color: 'Black',
+    mileage: 10000,
+     engine: {
+      type: "V4",
+      horsepower: 200,
+      cylinders: 4
+    }
+  },
+  {
+    id: 5,
+    make: 'Dodge',
+    model: 'Challenger',
+    year: 2016,
+    color: 'Blue',
+    mileage: 5000,
+     engine: {
+      type: "V6",
+      horsepower: 250,
+      cylinders: 6
+    }
+  },
+  {
+    id: 6,
+    make: 'BMW',
+    model: '3 Series',
+    year: 2015,
+    color: 'Silver',
+    mileage: 35000,
+     engine: {
+      type: "V8",
+      horsepower: 400,
+      cylinders: 8
+    }
+  },
+  {
+    id: 7,
+    make: 'Audi',
+    model: 'A4',
+    year: 2014,
+    color: 'Black',
+    mileage: 30000,
+     engine: {
+      type: "V4",
+      horsepower: 220,
+      cylinders: 4
+    }
+  },
+  {
+    id: 8,
+    make: 'Mercedes-Benz',
+    model: 'C-Class',
+    year: 2013,
+    color: 'White',
+    mileage: 25000,
+     engine: {
+      type: "V6",
+      horsepower: 280,
+      cylinders: 6
+    }
+  },
+  {
+    id: 9,
+    make: 'Volkswagen',
+    model: 'Golf',
+    year: 2012,
+    color: 'Red',
+    mileage: 20000,
+     engine: {
+      type: "V4",
+      horsepower: 180,
+      cylinders: 4
+    }
+  },
+  {
+    id: 10,
+    make: 'Tesla',
+    model: 'Model S',
+    year: 2011,
+    color: 'Silver',
+    mileage: 15000,
+     engine: {
+      type: "V4",
+      horsepower: 260,
+      cylinders: 4
+    }
+  },
+]
+
+
+
+// 1- Rengi gümüş olan arabaları bir listeye ata.
+
+
+// let silverCar=[]
+// let silverAllInfo=[]
+// carData.forEach(x=>{
+
+//   let {id,make,model,year,color,mileage,engine} =x
+//   if(color=="Silver"){
+//     silverCar.push(make)
+//     silverAllInfo.push(x)
+    
+//   }
+// })
+// console.log(silverCar)
+// console.log("****************")
+// console.log(silverAllInfo)
+
+// 2- 2015 yılından sonra üretilmiş arabaları bir listeye ata.
+
+// let after2015=[]
+
+// carData.forEach(x=>{
+
+//   let {id,make,model,year,color,mileage,engine} =x
+//   if(year>2015){
+//     after2015.push(make)
+//   }
+// })
+// console.log(after2015)
+
+
+// -------------------------------------------
+// Alternative
+// let after2015=carData.filter(x=>x.year>2015)
+// console.log(after2015)
+
+// --------------------------------------------------
+// 3- Arabaların ortalama kilometre değerini hesapla.
+
+// let value=carData.map(x=>x.mileage).reduce((accumulator,x)=>accumulator+x,0)
+// console.log("Avarage mileu :",value/carData.length)
+
+
+// ------------------------------------------------------------------------------------------
+// 4- 8 silindirli araçları listele
+
+
+
+// let circle=carData.filter(x=>x.engine.cylinders>6).map(x=>x.engine.cylinders)
+// console.log(circle)
+// -------------------------------------------------------------------------------------------
+
+// 5- Farklı uzunlukta olması muhtemel iki listeden İlki key'lerden, ikincisi ise Value'lardan oluşmaktadır. Yine key ve value'lardan oluşan bir obje döndüren bir fonksiyon yazınız. Yeterli value yoksa, kalan keylerin değeri null olmalıdır. Yeterli anahtar yoksa, değerlerin geri kalanını yok sayın.
+// keys = ['a', 'b', 'c', 'd']
+// values = [1, 2, 3]
+// createDict(keys, values) // returns {'a': 1, 'b': 2, 'c': 3, 'd': null}
+// let result={}
+// let assign= (keyFirst,valueFirst)=>{
+//   for(let i=0;i<keyFirst.length;i++){
+//       if(i<valueFirst.length){
+//         result[keyFirst[i]]=valueFirst[i]
+//       }else{
+//         result[keyFirst[i]]=0
+//       }
+//     }
+//     return
+
+// }
+// -----------------------------------------------------------------
+// keys = ['a', 'b', 'c', 'd']
+// values = [1, 2, 3]
+//     console.log(result)
+// assign(keys,values)
+// 6- Bir obje içerisindeki key ve value'ları değiştirin. Yani key'ler value'lar olmalı ve value'lar key'ler olmalıdır.
+// Örnek: {a: 1, b: 2, c: 3}  -->  {1: 'a', 2: 'b', 3: 'c'}
+// Not: Eğer bir value birden fazla key'e sahipse, son key'i kullanın.
+
+
+
+// let myOb={a: 1, b: 2, c: 3,d:2,} 
+// let myKeys=Object.keys(myOb)
+// let myValues=Object.values(myOb)
+
+// let newOb={}
+// for(let i=0;i<myKeys.length;i++){
+//   if(i<myValues.length){
+//     newOb[myValues[i]]=myKeys[i]
+//    }else{
+//       newOb[myValues[i]]=0
+//     }
+//  -----------------------------------------------------------
+// console.log(newOb)
+// 7-  Size bazı dilleri ve verilen dillerdeki test sonuçlarınızı içeren bir dictionarj obj verilir. Test puanınızın en az 60 olduğu dillerin listesini sonuçların azalan sırasına göre döndürün.
+// Not: puanlar her zaman benzersiz olacaktır (bu nedenle yinelenen değerler olmayacaktır)
+// örnekler
+// {"Java": 10, "Ruby": 80, "Python": 65}    -->  ["Ruby", "Python"]
+// {"Hindi": 60, "Dutch" : 93, "Greek": 71}  -->  ["Dutch", "Greek", "Hindi"]
+// {"C++": 50, "ASM": 10, "Haskell": 20}     -->  []
+// let results = {"Java": 10, "Ruby": 80, "Python": 95}
+
+
+
+
+// ----------------------------------------------------------------------------------------
+
+
+
+// 8-  Soru: Bir restoranın menüsündeki yemekleri temsil eden bir nesne dizisi olduğunu düşünelim. Her yemek nesnesi, yemek adı ve fiyatı gibi özelliklere sahiptir. Bu nesne dizisini kullanarak menüdeki her yemeğin adını ve fiyatını ekrana yazdıran bir JavaScript kodu nasıl yazılır?
+
+
+
+
+// 9-  Bir alışveriş sepetindeki ürünlerin listesini içeren bir dizi verilmiştir. Her bir ürün bir nesne olarak temsil edilmektedir ve her bir ürünün adı, fiyatı ve stok durumu bilgilerini içermektedir. Aşağıdaki gibi bir dizi verilmiştir:
+// let sepet = [
+//   { ad: 'Kalem', fiyat: 5, stok: 10 },
+//   { ad: 'Defter', fiyat: 10, stok: 5 },
+//   { ad: 'Silgi', fiyat: 2, stok: 3 },
+//   { ad: 'Kalemtraş', fiyat: 3, stok: 2 }
+// ];
+// Bu sepetin içindeki ürünlerin fiyatlarının toplamını bulmak için hangi array methodlarını kullanırsınız?
+
+
+
+
+// 10  Her kitap bir nesne olarak temsil edilmekte ve kitap adı, yazarı ve yayın tarihi gibi özelliklere sahip. Bu kitap koleksiyonunu kullanarak yayın tarihi 1950'dan önce olan kitapların listesini eski tarihten başlayarak sıralayıp ekrana yazdırın?
+
+
+
+// const library = [
+//   { title: "The Hunger Games", author: "Suzanne Collins", published: 2007 },
+//   { title: "Jane Eyre", author: "Charlotte Brontë", published: 1847 },
+//   { title: "A Christmas Carol", author: "Charles Dickens", published: 1843 },
+//   { title: "Steve Jobs", author: "Walter Isaacson", published: 2009 },
+//   { title: "Pride and Prejudice", author: "Jane Austen", published: 1813 },
+//   { title: "The Call of the Wild", author: "Jack London", published: 1903 },
+//   { title: "Bill Gates", author: "The Road Ahead", published: 2005 },
+//   { title: "Animal Farm", author: "George Orwell", published: 1945 },
+// ];
+
+// let myBook=library.filter(x=>x.published<1950).sort((a,b)=>a.published-b.published).forEach(x=>console.log(x))
+
+// let myTime=()=>{
+
+// let time=new Date()
+// let hour=time.getHours()
+// let minutes=time.getMinutes()
+// let seconds=time.getSeconds()
+
+// hour=hour.toString().padStart(2,"0")
+// minutes=minutes.toString().padStart(2,"0")
+// seconds=seconds.toString().padStart(2,"0")
+// let watch=hour+':'+minutes+':'+seconds
+// console.log(watch)
+
+// console.log(watch)
+
+// }
+
+// setInterval(myTime,1000)
+
+
+// let numbers=[1,2,3,4,5,6,7,8,9]
+
+// let user=+prompt("enter the number you want to multiply")
+// for(let x of numbers){
+//   console.log(x,".Number of ",x,'*',user,'=',user*x)
+// }
+
+// let number=+prompt("enter the number that you are looking for")
+// number=number.toString().split('').reverse().map(x=>{
+//    return x=parseInt(x)
+// })
+// let n=0
+// let arr=[]
+// for(let i=0;i<number.length;i++){
+  
+//   arr.push(number[i]**3)
+// }
+// arr=arr.reduce((top,x)=>top+x,0)
+// console.log(arr)
+// // arr=parseInt(arr.join(''))
+// number=number.reverse().join('')
+// console.log(number)
+// if(number==arr){
+//   console.log("True .This number is amstrong")
+// }else{
+//   console.log("false .This number is not amstrong")
+
+// }
+
+// while(true){
+//   let user=+prompt("Enter the number between 0-100")
+//   if(user<0 || user>100){
+//     alert("You did not enter the right number")
+//   }else if(/[!@#$%^&*()\-=_+{}[\]|\\;:'",.<>/?]/.test(user)){
+
+//     alert("You have entered caracter /(9=?). try again")
+//   }else if(/a+/.test(user)){
+//     alert("You have entered caracter. try again")
+//   }else{
+//     alert("You have entered right number",user)
+//     break
+
+//   }
+// }
+
+// let myNumber=[]
+// while (true) {
+//   let note = prompt("Enter the notes, or 'q' or 'Q' to quit");
+//   if (note !== 'q' && note !== 'Q') {
+//     let parsedNote = parseFloat(note);
+//     if (isNaN(parsedNote)) {
+//       console.log("Invalid input. Please enter a number or 'q' to quit.");
+//       break
+//     } else {
+//       myNumber.push(parsedNote);
+//     }
+//   } else {
+//     break;
+//   }
+// }
+// // console.log(myNumber)
+// let divider=myNumber.length
+
+// let new1=myNumber.reduce((accumulator,x)=>accumulator+x,0)
+
+// console.log("Avarage numbers entered :", new1/divider)
+
+
+
+// let id="Jackal1790"
+// let password="Jackal1790?"
+
+// let n=3
+
+// while(n!=0){
+//   let idUser=prompt("enter Id")
+//   if(id!==idUser){
+//     console.log("Wrong Id")
+//     n--
+//   }else{
+//     console.log("Right Id")
+//     break
+//   }
+// }
+
+// n=3
+
+// while(n!=0){
+//   let idPassword=prompt("enter password")
+//   if(idPassword!==password){
+//     console.log("wrong Password")
+//     n--
+//   }else{
+//     console.log("Right Password")
+//     break
+//   }
+// }
+
+
+// const countries = ['Finland', 'Estonia', 'Sweden', 'Denmark', 'Norway']
+// const [Fin,Es,Sw,Den,No]=countries
+// console.log(Fin,Es,Sw,Den,No)
+
+// const rectangle = {
+//   width: 20,
+//   height: 10,
+//   area: 200,
+//   perimeter: 60
+// }
+// let {width,height,area,perimeter}=rectangle
+// width=width-10
+// console.log(width,height,area,perimeter)
+
+
+// const users = [
+// {
+//   name:'Brook',
+//   scores:75,
+//   skills:['HTM', 'CSS', 'JS'],
+//   age:16
+// },
+// {
+//   name:'Alex',
+//   scores:80,
+//   skills:['HTM', 'CSS', 'JS'],
+//   age:18
+// },
+// {
+//   name:'David',
+//   scores:75,
+//   skills:['HTM', 'CSS'],
+//   age:22
+// },
+// {
+//   name:'John',
+//   scores:85,
+//   skills:['HTML'],
+//   age:25
+// },
+// {
+//   name:'Sara',
+//   scores:95,
+//   skills:['HTM', 'CSS', 'JS'],
+//   age: 26
+// },
+// {
+//   name:'Martha',
+//   scores:80,
+//   skills:['HTM', 'CSS', 'JS'],
+//   age:18
+// },
+// {
+//   name:'Thomas',
+//   scores:90,
+//   skills:['HTM', 'CSS', 'JS'],
+//   age:20
+// }
+// ]
+
+// let checker=(info)=>{
+//   for(let element of info){
+// const {name,scores,skills,age}=element
+// // console.log(name)
+// // console.log(scores)
+// // console.log(skills)
+// // console.log(age)
+// // console.log("**************")
+// if(skills.length<2){
+//   console.log(name)
+// }
+//   }
+
+// }
+// checker(users)
+
+// const countries = [
+//   { name: 'Finland', capital: 'Helsinki', population: 5500000, languages: ['Finnish', 'Swedish'] },
+//   { name: 'Estonia', capital: 'Tallinn', population: 1326000, languages: ['Estonian'] },
+//   { name: 'Sweden', capital: 'Stockholm', population: 10340000, languages: ['Swedish'] },
+//   { name: 'Denmark', capital: 'Copenhagen', population: 5814461, languages: ['Danish'] },
+//   { name: 'Norway', capital: 'Oslo', population: 5367580, languages: ['Norwegian'] }
+// ];
+
+// for(let{name,capital,population,languages} of countries){
+//   console.log("name :",name)
+//   console.log("capital :",capital)
+//   console.log("population :",population)
+//   console.log("Lnaguages :",languages)
+// }
+
+// const student = ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]]
+// const [name,skills,[,,jsScore,reactScore]]=student
+
+// console.log(name,skills,jsScore,reactScore)
+
+// const students = [
+//   ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]],
+//   ['John', ['HTM', 'CSS', 'JS', 'React'], [85, 80, 85, 80]]
+// ]
+// let convertedArray = students.map(([name, skills, scores]) => ({
+//   name,
+//   skills,
+//   scores
+// }));
+
+// console.log(convertedArray);
+
+// for(let [name,skills,scores] of students){
+
+// console.log(name)
+// console.log(skills)
+// console.log(scores)
+// }
+
+
+//     const student = {
+//       name: 'David',
+//       age: 25,
+//       skills: {
+//         frontEnd: [
+//           { skill: 'HTML', level: 10 },
+//           { skill: 'CSS', level: 8 },
+//           { skill: 'JS', level: 8 },
+//           { skill: 'React', level: 9 }
+//         ],
+//         backEnd: [
+//           { skill: 'Node',level: 7 },
+//           { skill: 'GraphQL', level: 8 },
+//         ],
+//         dataBase:[
+//           { skill: 'MongoDB', level: 7.5 },
+//         ],
+//         dataScience:['Python', 'R', 'D3.js']
+//       }
+//     }
+  
+// new arr1={...student,skills:{...student.skills,frontEnd:
+//   [...student.skills.frontEnd,{ skill: 'Bootstrap', level: 9 }]}}
+
+// console.log(arr1)
